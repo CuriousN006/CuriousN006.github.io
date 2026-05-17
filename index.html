@@ -3,54 +3,60 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CuriousN006 · 글 게시판</title>
+    <title>CuriousN006 · 전체 글</title>
     <meta
       name="description"
-      content="CuriousN006의 GitHub Pages 블로그입니다. 공부 기록, 프로젝트 메모, 회고를 게시판형 목록으로 정리합니다."
+      content="CuriousN006의 GitHub Pages 블로그입니다. 카테고리별 게시판으로 공부 기록, 프로젝트 메모, 회고를 정리합니다."
     >
-    <meta property="og:title" content="CuriousN006 · 글 게시판">
-    <meta property="og:description" content="공부 기록, 프로젝트 메모, 회고를 정리하는 게시판형 개인 블로그입니다.">
+    <meta property="og:title" content="CuriousN006 · 전체 글">
+    <meta property="og:description" content="카테고리별 게시판으로 정리하는 개인 블로그입니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curiousn006.github.io/">
-    <link rel="stylesheet" href="styles.css?v=20260517-3">
+    <link rel="stylesheet" href="styles.css?v=20260517-4">
   </head>
   <body>
     <header class="site-header">
       <a class="site-title" href="index.html">CuriousN006</a>
       <nav aria-label="Primary navigation">
-        <a href="index.html">게시판</a>
+        <a aria-current="page" href="index.html">전체 글</a>
         <a href="write.html">글쓰기</a>
         <a href="https://github.com/CuriousN006">GitHub</a>
       </nav>
     </header>
 
-    <main class="index-page">
-      <section class="site-note" aria-labelledby="site-heading">
-        <div>
-          <p class="kicker">github pages / static board</p>
-          <h1 id="site-heading">글 게시판</h1>
-        </div>
-        <p>
-          공부 기록, 프로젝트 메모, 회고를 날짜순으로 쌓는 개인 게시판입니다. 링크를 열면 누구나 읽을 수
-          있고, 새 글은 <code>posts</code> 폴더에 파일을 추가하는 방식으로 게시합니다.
+    <main class="board-layout">
+      <aside class="category-panel" aria-labelledby="category-heading">
+        <h1 id="category-heading">카테고리</h1>
+        <ul class="category-list">
+          <li><a aria-current="page" href="index.html"><span>전체 글</span><b>2</b></a></li>
+          <li><a href="categories/blog.html"><span>블로그</span><b>1</b></a></li>
+          <li><a href="categories/memo.html"><span>메모</span><b>1</b></a></li>
+          <li><a href="categories/project.html"><span>프로젝트</span><b>0</b></a></li>
+          <li><a href="categories/review.html"><span>회고</span><b>0</b></a></li>
+        </ul>
+        <p class="category-help">
+          글을 쓸 때 먼저 카테고리를 고르고, 해당 카테고리 게시판에 글을 추가합니다.
         </p>
-      </section>
+      </aside>
 
-      <section class="board-section" aria-labelledby="board-heading">
+      <section class="board-main" aria-labelledby="board-heading">
         <div class="board-toolbar">
-          <h2 id="board-heading">전체 글</h2>
+          <div>
+            <p class="kicker">all posts</p>
+            <h2 id="board-heading">전체 글</h2>
+          </div>
           <a class="write-action" href="write.html">글쓰기</a>
         </div>
 
         <table class="post-board">
           <caption>
-            CuriousN006 블로그 글 목록
+            CuriousN006 전체 글 목록
           </caption>
           <thead>
             <tr>
               <th scope="col">No</th>
+              <th scope="col">카테고리</th>
               <th scope="col">제목</th>
-              <th scope="col">분류</th>
               <th scope="col">날짜</th>
               <th scope="col">상태</th>
             </tr>
@@ -58,35 +64,35 @@
           <tbody>
             <tr>
               <td data-label="No">002</td>
+              <td data-label="카테고리"><a href="categories/memo.html">메모</a></td>
               <td data-label="제목">
                 <a href="posts/blog-writing-template.html">글 쓸 때 쓰는 간단한 틀</a>
                 <p>문제, 시도, 결과, 다음 행동으로 기록을 정리하는 기본 양식.</p>
               </td>
-              <td data-label="분류">메모</td>
               <td data-label="날짜"><time datetime="2026-05-17">2026.05.17</time></td>
               <td data-label="상태">초안</td>
             </tr>
             <tr>
               <td data-label="No">001</td>
+              <td data-label="카테고리"><a href="categories/blog.html">블로그</a></td>
               <td data-label="제목">
                 <a href="posts/first-post.html">GitHub Pages 블로그를 시작합니다</a>
                 <p>GitHub 아이디 기준으로 만든 개인 기록 공간의 첫 글.</p>
               </td>
-              <td data-label="분류">블로그</td>
               <td data-label="날짜"><time datetime="2026-05-17">2026.05.17</time></td>
               <td data-label="상태">게시</td>
             </tr>
           </tbody>
         </table>
-      </section>
 
-      <section class="plain-section" aria-labelledby="method-heading">
-        <h2 id="method-heading">운영 방식</h2>
-        <p>
-          GitHub Pages는 정적 사이트라서 일반 커뮤니티 게시판처럼 방문자가 브라우저에서 글을 저장하지는
-          못합니다. 대신 글쓰기 화면은 글의 형식을 잡는 용도이고, 실제 게시물은 HTML 파일로 저장소에
-          올리면 배포됩니다.
-        </p>
+        <section class="plain-section" aria-labelledby="method-heading">
+          <h2 id="method-heading">사용 방식</h2>
+          <p>
+            한국 블로그처럼 카테고리를 먼저 고르고 그 안에 글을 쌓는 구조입니다. GitHub Pages는 정적
+            사이트라서 방문자가 직접 저장하는 게시판은 아니지만, 운영자는 카테고리 페이지와 글 파일을
+            추가해서 같은 흐름으로 관리할 수 있습니다.
+          </p>
+        </section>
       </section>
     </main>
 
