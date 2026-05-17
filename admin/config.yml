@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: CuriousN006/CuriousN006.github.io
+  branch: main
+  use_graphql: true
+
+site_url: https://curiousn006.github.io
+display_url: https://curiousn006.github.io
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: boards
+    label: 카테고리
+    label_singular: 카테고리
+    folder: _boards
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - { label: 주소 슬러그, name: slug, widget: string, hint: "영문 소문자와 하이픈 권장. 예: project-notes" }
+      - { label: 이름, name: name, widget: string }
+      - { label: 설명, name: description, widget: text, required: false }
+      - { label: 정렬 순서, name: order, widget: number, default: 10, value_type: int }
+
+  - name: posts
+    label: 글
+    label_singular: 글
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: 레이아웃, name: layout, widget: hidden, default: post }
+      - { label: 제목, name: title, widget: string }
+      - { label: 작성일, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - label: 카테고리
+        name: category
+        widget: relation
+        collection: boards
+        search_fields: ["name", "slug"]
+        value_field: slug
+        display_fields: ["name"]
+      - { label: 요약, name: summary, widget: text }
+      - { label: 본문, name: body, widget: markdown }
