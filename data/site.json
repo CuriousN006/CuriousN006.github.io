@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "CuriousN006",
+    "description": "카테고리별 게시판으로 정리하는 개인 블로그입니다."
+  },
+  "categories": [
+    {
+      "slug": "blog",
+      "name": "블로그",
+      "description": "블로그 운영과 사이트 변경 기록"
+    },
+    {
+      "slug": "memo",
+      "name": "메모",
+      "description": "짧은 생각과 다시 찾을 실무 메모"
+    },
+    {
+      "slug": "project",
+      "name": "프로젝트",
+      "description": "프로젝트 진행 기록"
+    },
+    {
+      "slug": "review",
+      "name": "회고",
+      "description": "작업 후 남기는 회고"
+    }
+  ],
+  "posts": [
+    {
+      "id": "002",
+      "title": "글 쓸 때 쓰는 간단한 틀",
+      "category": "memo",
+      "date": "2026-05-17",
+      "url": "posts/blog-writing-template.html",
+      "summary": "문제, 시도, 결과, 다음 행동으로 기록을 정리하는 기본 양식."
+    },
+    {
+      "id": "001",
+      "title": "GitHub Pages 블로그를 시작합니다",
+      "category": "blog",
+      "date": "2026-05-17",
+      "url": "posts/first-post.html",
+      "summary": "GitHub 아이디 기준으로 만든 개인 기록 공간의 첫 글."
+    }
+  ]
+}
