@@ -1,0 +1,31 @@
+---
+layout: null
+---
+{% assign boards = site.boards | sort: "order" %}
+{
+  "site": {
+    "title": {{ site.title | jsonify }},
+    "description": {{ site.description | jsonify }}
+  },
+  "categories": [
+    {% for board in boards %}
+      {
+        "slug": {{ board.slug | jsonify }},
+        "name": {{ board.name | jsonify }},
+        "description": {{ board.description | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "posts": [
+    {% for post in site.posts %}
+      {
+        "id": {{ forloop.rindex | jsonify }},
+        "title": {{ post.title | jsonify }},
+        "category": {{ post.category | jsonify }},
+        "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+        "url": {{ post.url | relative_url | jsonify }},
+        "summary": {{ post.summary | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
