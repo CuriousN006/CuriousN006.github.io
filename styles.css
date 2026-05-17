@@ -86,9 +86,12 @@ nav,
 .write-action,
 .post-board th,
 .post-board td:first-child,
+.post-board td:nth-child(2),
 .post-board td:nth-child(3),
 .post-board td:nth-child(4),
-.post-board td:nth-child(5) {
+.post-board td:nth-child(5),
+.category-list,
+.category-help {
   font-family:
     "Source Sans 3",
     "Segoe UI",
@@ -117,6 +120,7 @@ li,
 td,
 th,
 input,
+select,
 textarea {
   overflow-wrap: anywhere;
 }
@@ -142,21 +146,55 @@ h3 {
   line-height: 1.25;
 }
 
-.index-page {
+.board-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 42px;
   padding: 34px 0 54px;
 }
 
-.site-note {
-  display: grid;
-  grid-template-columns: 240px minmax(0, var(--measure));
-  gap: 34px;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 24px;
+.category-panel {
+  border-right: 1px solid var(--rule);
+  padding-right: 22px;
 }
 
-.site-note p:last-child {
-  margin: 0;
-  color: #303030;
+.category-panel h1 {
+  font-size: 1.25rem;
+}
+
+.category-list {
+  display: grid;
+  gap: 2px;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  font-size: 0.94rem;
+}
+
+.category-list a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.category-list a[aria-current="page"] {
+  border-bottom: 1px solid var(--rule-dark);
+  font-weight: 700;
+}
+
+.category-list b {
+  color: var(--faint);
+  font-weight: 650;
+}
+
+.category-help {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .kicker {
@@ -165,10 +203,6 @@ h3 {
   font-size: 0.76rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.board-section {
-  padding: 24px 0 34px;
 }
 
 .board-toolbar {
@@ -225,6 +259,11 @@ h3 {
 
 .post-board td:nth-child(3),
 .post-board th:nth-child(3) {
+  width: auto;
+}
+
+.post-board td:nth-child(2),
+.post-board th:nth-child(2) {
   width: 110px;
 }
 
@@ -240,11 +279,24 @@ h3 {
 }
 
 .post-board td:first-child,
+.post-board td:nth-child(2),
 .post-board td:nth-child(3),
 .post-board td:nth-child(4),
 .post-board td:nth-child(5) {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.post-board td[data-label="제목"] {
+  color: var(--ink);
+  font-family:
+    "Source Serif 4",
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "Book Antiqua",
+    Georgia,
+    "Malgun Gothic",
+    serif;
 }
 
 .post-board a {
@@ -263,6 +315,13 @@ h3 {
   max-width: var(--measure);
   border-top: 1px solid var(--rule);
   padding-top: 24px;
+}
+
+.empty-state {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  margin: 0;
+  padding: 20px 0;
 }
 
 .plain-section p {
@@ -400,6 +459,7 @@ summary:hover {
 }
 
 input,
+select,
 textarea {
   width: 100%;
   border: 1px solid var(--rule);
@@ -444,7 +504,7 @@ textarea {
 
   .site-header,
   .site-footer,
-  .site-note {
+  .board-layout {
     align-items: flex-start;
     grid-template-columns: 1fr;
   }
@@ -454,8 +514,15 @@ textarea {
     flex-direction: column;
   }
 
-  .index-page {
+  .board-layout {
     padding-top: 26px;
+  }
+
+  .category-panel {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 0 22px;
+    width: 100%;
   }
 
   .post-board,
