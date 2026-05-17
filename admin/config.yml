@@ -3,6 +3,10 @@ backend:
   repo: CuriousN006/CuriousN006.github.io
   branch: main
   use_graphql: true
+  # GitHub Pages 단독 호스팅에서는 GitHub OAuth proxy가 별도로 필요합니다.
+  # Cloudflare Worker/Vercel/Netlify Function 등을 연결한 뒤 아래처럼 추가합니다.
+  # base_url: https://your-oauth-proxy.example.com
+  # auth_endpoint: auth
 
 site_url: https://curiousn006.github.io
 display_url: https://curiousn006.github.io
