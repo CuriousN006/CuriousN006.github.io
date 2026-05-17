@@ -22,7 +22,7 @@ https://curiousn006.github.io/
 1. `posts/new-post.html` 같은 새 글 파일을 만듭니다.
 2. `index.html`의 전체 글 표에 새 행을 추가합니다.
 3. 해당 카테고리 파일, 예를 들어 `categories/memo.html`, 에도 새 행을 추가합니다.
-4. 날짜, 카테고리, 상태를 함께 적습니다.
+4. 날짜와 카테고리를 함께 적습니다.
 5. 변경 사항을 GitHub에 올리면 Pages가 다시 배포합니다.
 
 ## GitHub Pages 설정
