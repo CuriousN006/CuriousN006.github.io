@@ -1,61 +1,40 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>카테고리 | CuriousN006</title>
-    <meta name="description" content="CuriousN006 카테고리별 글 목록입니다.">
-    <link rel="stylesheet" href="styles.css?v=20260517-6">
-    <script defer src="assets/board.js?v=20260517-6"></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="site-title" href="index.html">CuriousN006</a>
-      <nav aria-label="Primary navigation">
-        <a href="index.html">전체 글</a>
-        <a href="https://github.com/CuriousN006">GitHub</a>
-      </nav>
-    </header>
+---
+layout: default
+title: 카테고리
+board_script: true
+---
+<main class="board-layout">
+  <aside class="category-panel" aria-labelledby="category-heading">
+    <h1 id="category-heading">카테고리</h1>
+    <ul class="category-list" data-category-list>
+      <li>불러오는 중입니다.</li>
+    </ul>
+  </aside>
 
-    <main class="board-layout">
-      <aside class="category-panel" aria-labelledby="category-heading">
-        <h1 id="category-heading">카테고리</h1>
-        <ul class="category-list" data-category-list>
-          <li>불러오는 중입니다.</li>
-        </ul>
-      </aside>
+  <section class="board-main" aria-labelledby="board-heading">
+    <div class="board-toolbar">
+      <div>
+        <p class="kicker" data-board-kicker>category</p>
+        <h2 id="board-heading" data-board-heading>카테고리</h2>
+      </div>
+    </div>
+    <p class="category-description" data-board-description></p>
 
-      <section class="board-main" aria-labelledby="board-heading">
-        <div class="board-toolbar">
-          <div>
-            <p class="kicker" data-board-kicker>category</p>
-            <h2 id="board-heading" data-board-heading>카테고리</h2>
-          </div>
-        </div>
-        <p class="category-description" data-board-description></p>
-
-        <table class="post-board">
-          <caption>카테고리 글 목록</caption>
-          <thead>
-            <tr>
-              <th scope="col">No</th>
-              <th scope="col">카테고리</th>
-              <th scope="col">제목</th>
-              <th scope="col">날짜</th>
-            </tr>
-          </thead>
-          <tbody data-post-board>
-            <tr>
-              <td colspan="4">글 목록을 불러오는 중입니다.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>2026 · CuriousN006</span>
-      <a href="https://github.com/CuriousN006/CuriousN006.github.io">Repository</a>
-    </footer>
-  </body>
-</html>
+    <table class="post-board">
+      <caption>카테고리 글 목록</caption>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">카테고리</th>
+          <th scope="col">제목</th>
+          <th scope="col">날짜</th>
+        </tr>
+      </thead>
+      <tbody data-post-board>
+        <tr>
+          <td colspan="4">글 목록을 불러오는 중입니다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
