@@ -1,5 +1,5 @@
 (function () {
-  const DATA_URL = "data/site.json";
+  const DATA_URL = "/api/site.json";
 
   const escapeHtml = (value) =>
     String(value ?? "")
