@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/styles.css?v=20260517-7' | relative_url }}">
+    {% if page.board_script %}
+      <script defer src="{{ '/assets/board.js?v=20260517-7' | relative_url }}"></script>
+    {% endif %}
+  </head>
+  <body {% if page.category_slug %}data-category="{{ page.category_slug }}"{% endif %}>
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}">전체 글</a>
+        <a href="https://github.com/CuriousN006">GitHub</a>
+      </nav>
+    </header>
+    {{ content }}
+    <footer class="site-footer">
+      <span>2026 · {{ site.title }}</span>
+      <a href="https://github.com/CuriousN006/CuriousN006.github.io">Repository</a>
+    </footer>
+  </body>
+</html>
