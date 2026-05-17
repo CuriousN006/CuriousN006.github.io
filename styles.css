@@ -89,7 +89,6 @@ nav,
 .post-board td:nth-child(2),
 .post-board td:nth-child(3),
 .post-board td:nth-child(4),
-.post-board td:nth-child(5),
 .category-list,
 .category-help {
   font-family:
@@ -270,19 +269,13 @@ h3 {
 .post-board td:nth-child(4),
 .post-board th:nth-child(4) {
   width: 124px;
-}
-
-.post-board td:nth-child(5),
-.post-board th:nth-child(5) {
-  width: 82px;
   padding-right: 0;
 }
 
 .post-board td:first-child,
 .post-board td:nth-child(2),
 .post-board td:nth-child(3),
-.post-board td:nth-child(4),
-.post-board td:nth-child(5) {
+.post-board td:nth-child(4) {
   color: var(--muted);
   font-size: 0.9rem;
 }
