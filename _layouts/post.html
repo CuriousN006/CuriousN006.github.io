@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign board = site.boards | where: "slug", page.category | first %}
+<main class="post-page">
+  <a class="back-link" href="{{ '/' | relative_url }}">글 목록으로</a>
+  <article>
+    <header>
+      <p class="post-meta">
+        {{ page.date | date: "%Y.%m.%d" }}
+        {% if board %} · <a href="{{ '/category.html?slug=' | append: board.slug | relative_url }}">{{ board.name }}</a>{% endif %}
+      </p>
+      <h1>{{ page.title }}</h1>
+    </header>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+</main>
