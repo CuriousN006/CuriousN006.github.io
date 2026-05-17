@@ -3,41 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CuriousN006</title>
+    <title>CuriousN006 · 글 게시판</title>
     <meta
       name="description"
       content="CuriousN006의 GitHub Pages 블로그입니다. 공부 기록, 프로젝트 메모, 회고를 게시판형 목록으로 정리합니다."
     >
-    <meta property="og:title" content="CuriousN006">
+    <meta property="og:title" content="CuriousN006 · 글 게시판">
     <meta property="og:description" content="공부 기록, 프로젝트 메모, 회고를 정리하는 게시판형 개인 블로그입니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curiousn006.github.io/">
-    <link rel="stylesheet" href="styles.css?v=20260517-2">
+    <link rel="stylesheet" href="styles.css?v=20260517-3">
   </head>
   <body>
     <header class="site-header">
       <a class="site-title" href="index.html">CuriousN006</a>
       <nav aria-label="Primary navigation">
-        <a href="#board">게시판</a>
-        <a href="#notes">설명</a>
+        <a href="index.html">게시판</a>
+        <a href="write.html">글쓰기</a>
         <a href="https://github.com/CuriousN006">GitHub</a>
       </nav>
     </header>
 
-    <main>
-      <section class="masthead" aria-labelledby="site-heading">
-        <p class="kicker">personal notebook / github pages</p>
-        <h1 id="site-heading">CuriousN006</h1>
-        <p class="lede">
-          완성된 글보다 다시 찾아볼 수 있는 기록을 우선합니다. 글은 게시판처럼 쌓고, 각 글에는 문제,
-          과정, 확인한 증거, 다음 행동을 남깁니다.
+    <main class="index-page">
+      <section class="site-note" aria-labelledby="site-heading">
+        <div>
+          <p class="kicker">github pages / static board</p>
+          <h1 id="site-heading">글 게시판</h1>
+        </div>
+        <p>
+          공부 기록, 프로젝트 메모, 회고를 날짜순으로 쌓는 개인 게시판입니다. 링크를 열면 누구나 읽을 수
+          있고, 새 글은 <code>posts</code> 폴더에 파일을 추가하는 방식으로 게시합니다.
         </p>
       </section>
 
-      <section class="board-section" id="board" aria-labelledby="board-heading">
-        <div class="section-label">
-          <h2 id="board-heading">글 게시판</h2>
-          <p>최근 작성순</p>
+      <section class="board-section" aria-labelledby="board-heading">
+        <div class="board-toolbar">
+          <h2 id="board-heading">전체 글</h2>
+          <a class="write-action" href="write.html">글쓰기</a>
         </div>
 
         <table class="post-board">
@@ -78,19 +80,13 @@
         </table>
       </section>
 
-      <section class="notes" id="notes" aria-labelledby="notes-heading">
-        <div>
-          <h2 id="notes-heading">운영 방식</h2>
-          <p>
-            이 블로그는 정적 사이트입니다. 웹 화면에서 바로 글을 입력하는 게시판은 아니고,
-            <code>posts</code> 폴더에 글 파일을 추가한 뒤 이 목록에 한 줄을 더하는 방식으로 운영합니다.
-          </p>
-        </div>
-        <aside class="margin-note">
-          <p>
-            미학은 화려한 장식보다 읽기 좋은 본문, 회색조, 작은 메타데이터, 오래 남는 링크를 우선합니다.
-          </p>
-        </aside>
+      <section class="plain-section" aria-labelledby="method-heading">
+        <h2 id="method-heading">운영 방식</h2>
+        <p>
+          GitHub Pages는 정적 사이트라서 일반 커뮤니티 게시판처럼 방문자가 브라우저에서 글을 저장하지는
+          못합니다. 대신 글쓰기 화면은 글의 형식을 잡는 용도이고, 실제 게시물은 HTML 파일로 저장소에
+          올리면 배포됩니다.
+        </p>
       </section>
     </main>
 
