@@ -85,6 +85,7 @@ nav,
 .site-footer,
 .write-action,
 .post-board th,
+.admin-table th,
 .post-board td:first-child,
 .post-board td:nth-child(2),
 .post-board td:nth-child(3),
@@ -250,6 +251,14 @@ h3 {
   text-transform: uppercase;
 }
 
+.admin-table th {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 .post-board td:first-child,
 .post-board th:first-child {
   width: 54px;
@@ -317,6 +326,18 @@ h3 {
   padding: 20px 0;
 }
 
+.empty-table {
+  color: var(--muted);
+  padding: 18px 0;
+}
+
+.category-description {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  margin: 0 0 10px;
+  padding-top: 12px;
+}
+
 .plain-section p {
   margin: 10px 0 0;
   color: #303030;
@@ -335,7 +356,8 @@ h3 {
 }
 
 .post-page,
-.write-page {
+.write-page,
+.admin-page {
   max-width: var(--measure);
   padding: 46px 0 82px;
 }
@@ -430,6 +452,56 @@ summary:hover {
   gap: 16px;
 }
 
+.admin-section {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  border-top: 1px solid var(--rule);
+  padding: 8px 8px;
+  vertical-align: top;
+}
+
+.admin-table th:first-child,
+.admin-table td:first-child {
+  padding-left: 0;
+}
+
+.admin-table th:last-child,
+.admin-table td:last-child {
+  width: 70px;
+  padding-right: 0;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-status {
+  border-left: 1px solid var(--rule-dark);
+  color: var(--muted);
+  margin: 18px 0 0;
+  padding-left: 12px;
+}
+
+.admin-status[data-type="success"] {
+  color: #21613f;
+}
+
+.admin-status[data-type="error"] {
+  color: #8a2f2f;
+}
+
 .draft-form label {
   display: grid;
   gap: 6px;
@@ -466,6 +538,25 @@ textarea {
     "Malgun Gothic",
     monospace;
   padding: 9px 10px;
+}
+
+button {
+  border: 1px solid var(--rule-dark);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font:
+    0.92rem/1.4 "Source Sans 3",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
+  padding: 6px 10px;
+}
+
+button:hover {
+  background: var(--mark);
 }
 
 textarea {
