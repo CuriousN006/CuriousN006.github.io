@@ -1,81 +1,47 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CuriousN006 · 전체 글</title>
-    <meta
-      name="description"
-      content="CuriousN006의 GitHub Pages 블로그입니다. 카테고리별 게시판으로 공부 기록, 프로젝트 메모, 회고를 정리합니다."
-    >
-    <meta property="og:title" content="CuriousN006 · 전체 글">
-    <meta property="og:description" content="카테고리별 게시판으로 정리하는 개인 블로그입니다.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://curiousn006.github.io/">
-    <link rel="stylesheet" href="styles.css?v=20260517-6">
-    <script defer src="assets/board.js?v=20260517-6"></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="site-title" href="index.html">CuriousN006</a>
-      <nav aria-label="Primary navigation">
-        <a aria-current="page" href="index.html">전체 글</a>
-        <a href="https://github.com/CuriousN006">GitHub</a>
-      </nav>
-    </header>
+---
+layout: default
+title: 전체 글
+board_script: true
+---
+<main class="board-layout">
+  <aside class="category-panel" aria-labelledby="category-heading">
+    <h1 id="category-heading">카테고리</h1>
+    <ul class="category-list" data-category-list>
+      <li>불러오는 중입니다.</li>
+    </ul>
+  </aside>
 
-    <main class="board-layout">
-      <aside class="category-panel" aria-labelledby="category-heading">
-        <h1 id="category-heading">카테고리</h1>
-        <ul class="category-list" data-category-list>
-          <li>불러오는 중입니다.</li>
-        </ul>
-        <p class="category-help">
-          글을 쓸 때 먼저 카테고리를 고르고, 해당 카테고리 게시판에 글을 추가합니다.
-        </p>
-      </aside>
+  <section class="board-main" aria-labelledby="board-heading">
+    <div class="board-toolbar">
+      <div>
+        <p class="kicker" data-board-kicker>all posts</p>
+        <h2 id="board-heading" data-board-heading>전체 글</h2>
+      </div>
+    </div>
 
-      <section class="board-main" aria-labelledby="board-heading">
-        <div class="board-toolbar">
-          <div>
-            <p class="kicker" data-board-kicker>all posts</p>
-            <h2 id="board-heading" data-board-heading>전체 글</h2>
-          </div>
-        </div>
+    <table class="post-board">
+      <caption>{{ site.title }} 전체 글 목록</caption>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">카테고리</th>
+          <th scope="col">제목</th>
+          <th scope="col">날짜</th>
+        </tr>
+      </thead>
+      <tbody data-post-board>
+        <tr>
+          <td colspan="4">글 목록을 불러오는 중입니다.</td>
+        </tr>
+      </tbody>
+    </table>
 
-        <table class="post-board">
-          <caption>
-            CuriousN006 전체 글 목록
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">No</th>
-              <th scope="col">카테고리</th>
-              <th scope="col">제목</th>
-              <th scope="col">날짜</th>
-            </tr>
-          </thead>
-          <tbody data-post-board>
-            <tr>
-              <td colspan="4">글 목록을 불러오는 중입니다.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <section class="plain-section" aria-labelledby="method-heading">
-          <h2 id="method-heading">사용 방식</h2>
-          <p>
-            한국 블로그처럼 카테고리를 먼저 고르고 그 안에 글을 쌓는 구조입니다. GitHub Pages는 정적
-            사이트라서 방문자가 직접 저장하는 게시판은 아니지만, 운영자는 카테고리 페이지와 글 파일을
-            추가해서 같은 흐름으로 관리할 수 있습니다.
-          </p>
-        </section>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>2026 · CuriousN006</span>
-      <a href="https://github.com/CuriousN006/CuriousN006.github.io">Repository</a>
-    </footer>
-  </body>
-</html>
+    <section class="plain-section" aria-labelledby="method-heading">
+      <h2 id="method-heading">운영 방식</h2>
+      <p>
+        카테고리와 글은 Decap CMS에서 관리합니다. 운영자는 <code>/admin/</code>에서 GitHub로 로그인한 뒤
+        카테고리와 글을 GUI로 추가하거나 수정할 수 있습니다.
+      </p>
+    </section>
+  </section>
+</main>
