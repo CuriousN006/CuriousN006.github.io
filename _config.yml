@@ -1,0 +1,15 @@
+title: CuriousN006
+description: 카테고리별 게시판으로 정리하는 개인 블로그입니다.
+url: "https://curiousn006.github.io"
+permalink: /posts/:year/:month/:day/:title/
+
+collections:
+  boards:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
