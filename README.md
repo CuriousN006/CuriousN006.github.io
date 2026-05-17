@@ -1,30 +1,31 @@
-# CuriousN006 GitHub Pages Blog
+# CuriousN006
 
-GitHub Pages에 바로 올릴 수 있는 개인 블로그입니다.
+GitHub Pages에 배포하는 게시판형 개인 블로그입니다.
 
-## 배포 주소
+## 주소
 
 ```text
 https://curiousn006.github.io/
 ```
 
-## GitHub 저장소 이름
+## 디자인 방향
 
-```text
-CuriousN006.github.io
-```
+- 회색조 중심의 미니멀 문서형 화면
+- 카드보다 표 기반 게시판 목록
+- 긴 글 읽기에 맞춘 serif 본문
+- 작은 메타데이터, 접히는 세부 정보, 여백 노트
+- JavaScript 없이 읽히는 정적 페이지
 
 ## 글 추가 방법
 
-1. `posts/새-글-이름.html` 파일을 만듭니다.
-2. `index.html`의 `최근 글` 영역에 새 글 링크를 추가합니다.
-3. 변경 사항을 GitHub에 push하면 GitHub Pages가 자동으로 반영합니다.
+1. `posts/new-post.html` 같은 새 글 파일을 만듭니다.
+2. `index.html`의 `post-board` 표에 새 행을 추가합니다.
+3. 날짜, 분류, 상태를 함께 적습니다.
+4. 변경 사항을 GitHub에 올리면 Pages가 다시 배포합니다.
 
-## 배포 설정
+## GitHub Pages 설정
 
-GitHub 저장소에서 `Settings > Pages`로 들어가서 아래처럼 설정합니다.
-
+- Repository: `CuriousN006.github.io`
 - Source: `Deploy from a branch`
 - Branch: `main`
-- Folder: `/root`
-
+- Folder: `/`
