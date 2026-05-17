@@ -3,106 +3,99 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CuriousN006 Blog</title>
+    <title>CuriousN006</title>
     <meta
       name="description"
-      content="CuriousN006의 GitHub Pages 블로그입니다. 공부 기록, 프로젝트 메모, 회고를 정리합니다."
+      content="CuriousN006의 GitHub Pages 블로그입니다. 공부 기록, 프로젝트 메모, 회고를 게시판형 목록으로 정리합니다."
     >
-    <meta property="og:title" content="CuriousN006 Blog">
-    <meta property="og:description" content="공부 기록, 프로젝트 메모, 회고를 정리하는 개인 블로그입니다.">
+    <meta property="og:title" content="CuriousN006">
+    <meta property="og:description" content="공부 기록, 프로젝트 메모, 회고를 정리하는 게시판형 개인 블로그입니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curiousn006.github.io/">
-    <meta property="og:image" content="https://github.com/CuriousN006.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="CuriousN006 Blog home">
-        <img src="https://github.com/CuriousN006.png" alt="" width="40" height="40">
-        <span>CuriousN006</span>
-      </a>
+      <a class="site-title" href="index.html">CuriousN006</a>
       <nav aria-label="Primary navigation">
-        <a href="#posts">글</a>
-        <a href="#about">소개</a>
+        <a href="#board">게시판</a>
+        <a href="#notes">설명</a>
         <a href="https://github.com/CuriousN006">GitHub</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">GitHub Pages Blog</p>
-          <h1 id="hero-title">CuriousN006</h1>
-          <p class="hero-text">
-            공부하며 남긴 기록, 프로젝트를 정리하며 배운 것, 다시 꺼내보고 싶은 생각을 모아두는 블로그입니다.
-          </p>
-          <div class="hero-actions" aria-label="Main actions">
-            <a class="button primary" href="#posts">최근 글 보기</a>
-            <a class="button secondary" href="https://github.com/CuriousN006">GitHub 보기</a>
-          </div>
-        </div>
-        <aside class="profile-panel" aria-label="Profile summary">
-          <img src="https://github.com/CuriousN006.png" alt="CuriousN006 GitHub avatar" width="120" height="120">
-          <dl>
-            <div>
-              <dt>주소</dt>
-              <dd>curiousn006.github.io</dd>
-            </div>
-            <div>
-              <dt>주제</dt>
-              <dd>공부, 프로젝트, 회고</dd>
-            </div>
-            <div>
-              <dt>기록 방식</dt>
-              <dd>짧게 쓰고 자주 고치기</dd>
-            </div>
-          </dl>
-        </aside>
-      </section>
-
-      <section class="section" id="posts" aria-labelledby="posts-title">
-        <div class="section-heading">
-          <p class="eyebrow">Posts</p>
-          <h2 id="posts-title">최근 글</h2>
-        </div>
-        <div class="post-list">
-          <article class="post-card">
-            <div class="post-meta">
-              <time datetime="2026-05-17">2026.05.17</time>
-              <span>블로그</span>
-            </div>
-            <h3><a href="posts/first-post.html">GitHub Pages 블로그를 시작합니다</a></h3>
-            <p>
-              GitHub 아이디를 기준으로 만든 첫 블로그 글입니다. 앞으로 공부와 프로젝트 기록을 이곳에 정리합니다.
-            </p>
-          </article>
-          <article class="post-card">
-            <div class="post-meta">
-              <time datetime="2026-05-17">2026.05.17</time>
-              <span>메모</span>
-            </div>
-            <h3><a href="posts/blog-writing-template.html">글 쓸 때 쓰는 간단한 틀</a></h3>
-            <p>
-              매번 빈 화면에서 시작하지 않도록 문제, 과정, 배운 점, 다음 행동 순서로 정리하는 템플릿입니다.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="about-band" id="about" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">이 블로그의 역할</h2>
-        </div>
-        <p>
-          완성된 결과만 모으기보다, 막혔던 지점과 해결 과정을 같이 남기는 공간입니다. 나중에 다시 볼 때
-          바로 이어서 생각할 수 있도록 파일명, 명령어, 링크, 판단 기준을 구체적으로 적습니다.
+      <section class="masthead" aria-labelledby="site-heading">
+        <p class="kicker">personal notebook / github pages</p>
+        <h1 id="site-heading">CuriousN006</h1>
+        <p class="lede">
+          완성된 글보다 다시 찾아볼 수 있는 기록을 우선합니다. 글은 게시판처럼 쌓고, 각 글에는 문제,
+          과정, 확인한 증거, 다음 행동을 남깁니다.
         </p>
+      </section>
+
+      <section class="board-section" id="board" aria-labelledby="board-heading">
+        <div class="section-label">
+          <h2 id="board-heading">글 게시판</h2>
+          <p>최근 작성순</p>
+        </div>
+
+        <table class="post-board">
+          <caption>
+            CuriousN006 블로그 글 목록
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">제목</th>
+              <th scope="col">분류</th>
+              <th scope="col">날짜</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="No">002</td>
+              <td data-label="제목">
+                <a href="posts/blog-writing-template.html">글 쓸 때 쓰는 간단한 틀</a>
+                <p>문제, 시도, 결과, 다음 행동으로 기록을 정리하는 기본 양식.</p>
+              </td>
+              <td data-label="분류">메모</td>
+              <td data-label="날짜"><time datetime="2026-05-17">2026.05.17</time></td>
+              <td data-label="상태">초안</td>
+            </tr>
+            <tr>
+              <td data-label="No">001</td>
+              <td data-label="제목">
+                <a href="posts/first-post.html">GitHub Pages 블로그를 시작합니다</a>
+                <p>GitHub 아이디 기준으로 만든 개인 기록 공간의 첫 글.</p>
+              </td>
+              <td data-label="분류">블로그</td>
+              <td data-label="날짜"><time datetime="2026-05-17">2026.05.17</time></td>
+              <td data-label="상태">게시</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes" id="notes" aria-labelledby="notes-heading">
+        <div>
+          <h2 id="notes-heading">운영 방식</h2>
+          <p>
+            이 블로그는 정적 사이트입니다. 웹 화면에서 바로 글을 입력하는 게시판은 아니고,
+            <code>posts</code> 폴더에 글 파일을 추가한 뒤 이 목록에 한 줄을 더하는 방식으로 운영합니다.
+          </p>
+        </div>
+        <aside class="margin-note">
+          <p>
+            미학은 화려한 장식보다 읽기 좋은 본문, 회색조, 작은 메타데이터, 오래 남는 링크를 우선합니다.
+          </p>
+        </aside>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 CuriousN006</span>
+      <span>2026 · CuriousN006</span>
       <a href="https://github.com/CuriousN006/CuriousN006.github.io">Repository</a>
     </footer>
   </body>
