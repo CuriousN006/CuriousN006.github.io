@@ -3,50 +3,63 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GitHub Pages 블로그를 시작합니다 | CuriousN006 Blog</title>
+    <title>GitHub Pages 블로그를 시작합니다 | CuriousN006</title>
     <meta name="description" content="CuriousN006 GitHub Pages 블로그의 첫 글입니다.">
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="CuriousN006 Blog home">
-        <img src="https://github.com/CuriousN006.png" alt="" width="40" height="40">
-        <span>CuriousN006</span>
-      </a>
+      <a class="site-title" href="../index.html">CuriousN006</a>
       <nav aria-label="Primary navigation">
-        <a href="../index.html#posts">글</a>
-        <a href="../index.html#about">소개</a>
+        <a href="../index.html#board">게시판</a>
+        <a href="../index.html#notes">설명</a>
         <a href="https://github.com/CuriousN006">GitHub</a>
       </nav>
     </header>
 
     <main class="post-page">
-      <a class="back-link" href="../index.html#posts">← 글 목록</a>
+      <a class="back-link" href="../index.html#board">글 목록으로</a>
       <article>
         <header>
-          <time datetime="2026-05-17">2026.05.17</time>
+          <p class="post-meta">2026.05.17 · 블로그 · 게시</p>
           <h1>GitHub Pages 블로그를 시작합니다</h1>
         </header>
+
         <p>
           이 블로그는 GitHub 아이디인 <code>CuriousN006</code> 기준으로 만든 개인 기록 공간입니다.
           주소는 <code>https://curiousn006.github.io/</code> 형태로 쓰게 됩니다.
+          <span class="sidenote">실명 대신 GitHub 아이디가 사이트 이름과 주소의 기준이 됩니다.</span>
         </p>
+
         <h2>무엇을 적을까</h2>
         <p>
           공부하면서 이해한 내용, 프로젝트를 만들며 막혔던 지점, 다시 쓰기 좋은 명령어와 설정을 정리합니다.
           완벽한 글보다 다음에 바로 이어서 볼 수 있는 기록을 우선합니다.
         </p>
+
+        <div class="post-note">
+          <p>좋은 기록은 멋있는 문장보다 다시 찾기 쉬운 단서를 남기는 쪽에 가깝습니다.</p>
+        </div>
+
         <h2>운영 원칙</h2>
         <ul>
           <li>짧게라도 남기고, 나중에 고칩니다.</li>
           <li>파일명, 링크, 명령어처럼 다시 찾기 쉬운 단서를 남깁니다.</li>
           <li>결과뿐 아니라 판단 과정도 같이 적습니다.</li>
         </ul>
+
+        <details>
+          <summary>글을 추가하는 방식</summary>
+          <p>
+            <code>posts</code> 폴더에 새 HTML 파일을 만들고, 홈 화면의 게시판 표에 새 행을 추가합니다.
+            GitHub에 올리면 Pages가 자동으로 다시 배포합니다.
+          </p>
+        </details>
       </article>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 CuriousN006</span>
+      <span>2026 · CuriousN006</span>
       <a href="https://github.com/CuriousN006/CuriousN006.github.io">Repository</a>
     </footer>
   </body>
